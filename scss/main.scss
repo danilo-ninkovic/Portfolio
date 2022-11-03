@@ -1,8 +1,9 @@
 @import "./config"; /* varijable iz _config.scss */
+@import "./home";
 
 body {
   background: $primary-color;
-  color: #fff;
+  color: set-text-color($primary-color);
   height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
@@ -15,7 +16,7 @@ h3 {
 }
 
 a {
-  color: #fff;
+  color: set-text-color($primary-color);
   text-decoration: none;
 }
 
@@ -32,12 +33,13 @@ main {
 
   .social-icons {
     position: fixed;
-    bottom: 1rrem;
+    bottom: 1rem;
     left: 1rem;
 
     a {
       padding: 0.4rem;
-
+      @include transition-ease;
+      /* reusable transition iz -config.scss */
       &:hover {
         color: $secondary-color;
       }
@@ -52,5 +54,5 @@ footer {
   right: 1rem;
   text-align: right;
   padding: 1rem;
-  color: #fff;
+  color: set-text-color($primary-color);
 }

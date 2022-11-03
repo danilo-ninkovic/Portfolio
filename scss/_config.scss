@@ -1,8 +1,30 @@
+/* Globalni re-used styles */
+
 $primary-color: #272727;
-$secondary-color:#ff6527;
+$secondary-color: #ff6527;
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* reusable transition   
+iz osnovne boje će pri :hover za 
+ 0.5s polako preći u drugu boju
+*/
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+/* reusable function  */
+/* ako je lightenes $color veća od 40% vrati #000 crnu 
+u suprotnom vrati #fff bijelu
+*/
+@function set-text-color($color) {
+  @if (lighteness($color > 40%)) {
+    @return #000;
+  } @else {
+    @return #ffff;
+  }
 }

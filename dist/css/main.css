@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/* Globalni re-used styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* reusable transition   
+iz osnovne boje će pri :hover za 
+ 0.5s polako preći u drugu boju
+*/
+/* reusable function  */
+/* ako je lightenes $color veća od 40% vrati #000 crnu 
+u suprotnom vrati #fff bijelu
+*/
+/* varijable iz _config.scss */
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg") center top;
+  background-size: cover;
+}
+.home-name {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  border-bottom: 2px solid #fff;
+}
+.home-name__last {
+  color: #ff6527;
+  font-weight: 700;
+}
+
+body {
+  background: #272727;
+  color: #fff;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+main .social-icons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+main .social-icons a {
+  padding: 0.4rem;
+  transition: all 0.5s ease-in-out;
+  /* reusable transition iz -config.scss */
+}
+main .social-icons a:hover {
+  color: #ff6527;
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: #fff;
+}/*# sourceMappingURL=main.css.map */
