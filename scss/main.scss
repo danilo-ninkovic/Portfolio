@@ -1,5 +1,6 @@
-@import "./config"; /* varijable iz _config.scss */
-@import "./home";
+@import "config"; /* varijable iz _config.scss */
+@import "home";
+@import "menu";
 
 body {
   background: $primary-color;
