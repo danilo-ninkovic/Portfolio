@@ -42,7 +42,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 100%;
+      top: 100%; /* krenut će sa dna */
       left: 0;
       height: 100%;
       width: 100%;
@@ -79,6 +79,7 @@
     @include transition-ease;
 
     &:hover {
+      /* inicijalno je crna a :hover bijela */
       color: set-text-color(set-text-color($secondary-color));
     }
   }
